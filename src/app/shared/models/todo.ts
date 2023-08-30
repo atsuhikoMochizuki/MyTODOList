@@ -9,6 +9,7 @@ export class Todo {
       public editable = false, 
       public oldDesc='') {
         this.id = ++Todo._count+'';
+      this.oldDesc = this.desc;
   
     }
   }

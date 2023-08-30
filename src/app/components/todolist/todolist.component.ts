@@ -10,31 +10,41 @@ import { Todo } from 'src/app/shared/models/todo';
 
 
 export class TodolistComponent {
-  
-  todos: Todo[] = [
-    new Todo("Faire la vaisselle"),
-    new Todo("Faire le ménage", true),
-    new Todo("Faire les courses")
-  ];
 
-  constructor(){
-    this.todos.forEach(t=>{
-      t.oldDesc = t.desc  }
-      );
+  todos: Todo[] = [];
+  error:string = '';
+
+  constructor() {
+    this.todos.forEach(t => {
+      t.oldDesc = t.desc
+    }
+    );
   }
 
-  editToDo(todo : Todo) {
-   todo.editable = !todo.editable;
-   todo.oldDesc = todo.desc;
+  editToDo(todo: Todo) {
+    todo.editable = !todo.editable;
+    todo.oldDesc = todo.desc;
   }
-  deleteTodo(id:string) {
-   this.todos=this.todos.filter(t=>t.id !=id)
+  deleteTodo(id: string) {
+    this.todos = this.todos.filter(t => t.id != id)
   }
-  cancelEdit(todo:Todo){
-   todo.editable=false
+  cancelEdit(todo: Todo) {
+    todo.editable = false
     todo.desc = todo.oldDesc;
   }
 
+  createToDo(input: HTMLInputElement) {
+    if (input.value.length > 2) {
+      this.todos.push(
+        new Todo(input.value)
+      )
+      input.value = '';
+    }
+    else{
+      this.error = 'Vous devez saisir au minimum 3 caractères !';
+      setTimeout(()=>this.error = '',2000);
+    }
+  }
 }
 
 

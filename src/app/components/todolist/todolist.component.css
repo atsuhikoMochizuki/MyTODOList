@@ -15,3 +15,18 @@ h1 {
 .todo p.done{
     text-decoration: line-through;
 }
+.form-add-todo{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.error{
+    color:red;
+    font-size : 0,8 rem;
+}
+
+.form-add-toto:first-child{
+    margin-right: 10px;
+
+}
