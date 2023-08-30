@@ -1,0 +1,21 @@
+<div>
+    <h1>Ma liste de tâches</h1>
+    <div class="todos">
+        <div class="todo" *ngFor="let todo of todos">
+            <p *ngIf="!todo.editable" [class.done]="todo.done">{{todo.desc}}</p>
+            <input 
+            *ngIf="todo.editable" 
+            type="text" [(ngModel)]="todo.desc">
+            <input type="checkbox" [checked]="todo.done" (change)="todo.done = !todo.done">
+            <div class="buttons">
+                <button (click)="deleteTodo(todo.id)">🛠️</button>
+                <button (click)="editToDo(todo)">
+                    {{todo.editable ? '✏️' : '❎'}}
+                </button>
+                <button 
+                *ngIf="todo.editable"
+                (click)="cancelEdit(todo)">🏴</button>
+            </div>
+        </div>
+    </div>
+</div>

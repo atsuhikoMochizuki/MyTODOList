@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+}
+
+.todos {
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+
+.todo {
+    display: flex;
+}
+
+.todo p.done{
+    text-decoration: line-through;
+}
