@@ -1,0 +1,21 @@
+{
+    "users":[
+        {
+         	"id":"edcca62a-993f-409d-8210-bc164c85cdc8",
+            "firstName": "coco",
+            "lastName": "COCO",
+            "email":"coco@mail.fr"
+        },
+        {
+         	"id":"a25f230f-d2e6-41a3-9150-067720dbc643",
+            "firstName": "pedro",
+            "lastName": "pedro@mail.fr"
+        },
+        {
+         	"id":"3a66a496-0393-42be-b0c6-de2514ac9341",
+            "firstName": "sancho",
+            "lastName": "SANCHO",
+            "email":"sancho@mail.fr"
+        }
+    ]
+}

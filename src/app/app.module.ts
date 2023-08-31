@@ -12,8 +12,9 @@ import { TodoListComponent } from './components/todos/todo-list/todo-list.compon
 import { TodoItemComponent } from './components/todos/todo-item/todo-item.component';
 import { TodoFormsComponent } from './components/todos/todo-forms/todo-forms.component';
 import { TodoDetailsComponent } from './components/todos/todo-details/todo-details.component';
-import { TodoComponent } from './shared/models/todo/todo.component';
+import { AuthService } from './shared/service/auth.service';
 import { RouterModule } from '@angular/router';
+import { TodoService } from './shared/service/todo.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { RouterModule } from '@angular/router';
     TodoItemComponent,
     TodoFormsComponent,
     TodoDetailsComponent,
-    TodoComponent
+TodosComponent
   ],
   imports: [
     BrowserModule,
